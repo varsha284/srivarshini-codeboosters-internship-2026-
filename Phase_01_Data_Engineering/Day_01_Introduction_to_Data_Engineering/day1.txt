@@ -1,0 +1,113 @@
+## 1. A hospital stores patient X-ray images, doctor's notes, and a table of patient vital signs. Classify each data type.
+
+### Answer:
+
+| Data Type                    | Classification                      |
+| ---------------------------- | ----------------------------------- |
+| Patient X-ray images         | Unstructured Data                   |
+| Doctor's notes               | Semi-structured / Unstructured Data |
+| Table of patient vital signs | Structured Data                     |
+
+### Explanation:
+
+* **Structured Data** → Organized in rows and columns (like tables in databases).
+* **Semi-structured Data** → Has some organization but not fully structured.
+* **Unstructured Data** → Images, videos, audio, etc., without a fixed format.
+
+---
+
+## 2. Why do companies need Data Engineers? Give a real-world example.
+
+### Answer:
+
+Companies need Data Engineers to collect, store, clean, and manage large amounts of data so that businesses can make better decisions.
+
+Data Engineers build data pipelines and databases that help Data Scientists and Analysts work efficiently.
+
+### Real-world Example:
+
+Amazon uses Data Engineers to process millions of customer orders, payment records, and delivery details every day.
+They organize this data so Amazon can:
+
+* Recommend products
+* Track deliveries
+* Analyze customer behavior
+* Improve shopping experience
+
+---
+
+## 3. Write Python code to load sales.csv and show its first 10 rows.
+
+### Answer:
+
+```python
+import pandas as pd
+
+df = pd.read_csv("sales.csv")
+
+print(df.head(10))
+```
+
+### Explanation:
+
+* `read_csv()` → Loads the CSV file
+* `head(10)` → Displays the first 10 rows
+
+---
+
+## 4. What does df.shape return? If it returns (500, 15), what does each number mean?
+
+### Answer:
+
+`df.shape` returns the number of rows and columns in a DataFrame.
+
+If it returns:
+
+```python
+(500, 15)
+```
+
+It means:
+
+* `500` → Number of rows
+* `15` → Number of columns
+
+### Example:
+
+The dataset contains:
+
+* 500 records (entries)
+* 15 fields/features
+
+---
+
+## 5. How do you filter a DataFrame called orders to show only rows where city is Mumbai?
+
+### Answer:
+
+```python
+orders[orders["city"] == "Mumbai"]
+```
+
+### Explanation:
+
+* `orders["city"] == "Mumbai"` checks rows where city is Mumbai.
+* The DataFrame returns only matching rows.
+
+---
+
+## 6. You accidentally delete your Python script. How would GitHub have saved you?
+
+### Answer:
+
+GitHub saves previous versions of files using Git version control.
+
+If the Python script was pushed to GitHub:
+
+* You can open the repository
+* Find the file history or previous commits
+* Restore or download the deleted file
+
+### Benefit:
+
+GitHub acts like a backup system and helps developers recover lost code easily.
